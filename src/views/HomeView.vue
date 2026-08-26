@@ -133,7 +133,7 @@ const apps = [
     id: 8,
     name: 'VAT Calculator',
     description: 'Quick and accurate calculator for complex VAT scenarios.',
-    icon: '🖩',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="1em" height="1em"><rect x="8" y="4" width="48" height="56" rx="6" fill="#ec4899"/><rect x="14" y="10" width="36" height="12" rx="2" fill="#fbcfe8"/><rect x="14" y="28" width="8" height="8" rx="2" fill="#fde047"/><rect x="28" y="28" width="8" height="8" rx="2" fill="#fde047"/><rect x="42" y="28" width="8" height="8" rx="2" fill="#f87171"/><rect x="14" y="42" width="8" height="8" rx="2" fill="#fde047"/><rect x="28" y="42" width="8" height="8" rx="2" fill="#fde047"/><rect x="42" y="42" width="8" height="8" rx="2" fill="#34d399"/></svg>',
     url: '/vat-calculator',
     status: 'Live',
     isFree: true,
@@ -266,7 +266,7 @@ const apps = [
                 <div class="card-glow" :style="{'--glow-color': app.color}"></div>
                 <div class="card-content">
                   <div class="app-header">
-                    <span class="app-icon">{{ app.icon }}</span>
+                    <span class="app-icon" v-html="app.icon"></span>
                     <div style="display: flex; gap: 0.5rem;">
                       <span v-if="app.isFree" class="status-badge free">Free</span>
                       <span class="status-badge" :class="app.status.toLowerCase().replace(' ', '-')">{{ app.status }}</span>
@@ -284,7 +284,7 @@ const apps = [
                 <div class="card-glow" :style="{'--glow-color': app.color}"></div>
                 <div class="card-content">
                   <div class="app-header">
-                    <span class="app-icon">{{ app.icon }}</span>
+                    <span class="app-icon" v-html="app.icon"></span>
                     <div style="display: flex; gap: 0.5rem;">
                       <span v-if="app.isFree" class="status-badge free">Free</span>
                       <span class="status-badge" :class="app.status.toLowerCase().replace(' ', '-')">{{ app.status }}</span>
