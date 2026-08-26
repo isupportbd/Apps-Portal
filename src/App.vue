@@ -134,8 +134,8 @@ const apps = [
     name: 'VAT Calculator',
     description: 'Quick and accurate calculator for complex VAT scenarios.',
     icon: '🧮',
-    url: '#',
-    status: 'Coming Soon',
+    url: 'https://oneassociatebd.com',
+    status: 'Free',
     color: '#ec4899'
   },
   {
@@ -260,7 +260,7 @@ const apps = [
           </div>
           
           <div class="apps-grid">
-            <a v-for="app in apps" :key="app.id" :href="app.url" class="app-card" :class="{'disabled': app.status !== 'Live'}">
+            <a v-for="app in apps" :key="app.id" :href="app.url" class="app-card" :class="{'disabled': app.status === 'Coming Soon'}">
               <div class="card-glow" :style="{'--glow-color': app.color}"></div>
               <div class="card-content">
                 <div class="app-header">
@@ -270,7 +270,7 @@ const apps = [
                 <h3>{{ app.name }}</h3>
                 <p>{{ app.description }}</p>
                 <div class="card-action">
-                  <span v-if="app.status === 'Live'">Open App →</span>
+                  <span v-if="app.status !== 'Coming Soon'">Open App →</span>
                   <span v-else>In Development</span>
                 </div>
               </div>
@@ -801,6 +801,12 @@ section {
   background: rgba(245, 158, 11, 0.15);
   color: #fbbf24;
   border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.status-badge.free {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.3);
 }
 
 .card-content h3 {
