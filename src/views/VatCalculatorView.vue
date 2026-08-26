@@ -582,24 +582,25 @@ input[type=number] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
-  padding: 1.25rem;
-  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+  margin-top: 0.5rem;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: none;
 }
 
 .receipt-total .receipt-label {
-  color: rgba(255,255,255,0.9);
+  color: #00d2ff;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
 }
 
 .receipt-total .receipt-value {
-  color: white;
-  font-size: 1.35rem;
+  color: #00d2ff;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
