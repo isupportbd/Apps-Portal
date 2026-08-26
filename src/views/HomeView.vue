@@ -156,16 +156,7 @@ const apps = [
     url: '#',
     status: 'Coming Soon',
     color: '#f43f5e'
-  },
-  {
-    id: 13,
-    name: 'ZiniPay',
-    description: 'Automated payment gateway for seamless personal bKash/Nagad transactions.',
-    icon: '💳',
-    url: '#',
-    status: 'Coming Soon',
-    color: '#0ea5e9'
-  }
+
 ];
 
 </script>
