@@ -254,7 +254,7 @@ const reset = () => {
   min-height: 100vh;
 }
 .vat-calc-page {
-  padding: 120px 0 80px;
+  padding: 80px 0 60px;
   min-height: calc(100vh - 80px);
 }
 
@@ -359,8 +359,9 @@ const reset = () => {
 }
 
 .mode-btn.active {
-  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  color: white;
+  background: rgba(0, 210, 255, 0.15);
+  color: #00d2ff;
+  border: 1px solid rgba(0, 210, 255, 0.3);
 }
 
 /* Input Fields */
@@ -433,9 +434,9 @@ input[type=number] {
 }
 
 .rate-btn.active {
-  border-color: transparent;
-  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  color: white;
+  border-color: rgba(0, 210, 255, 0.3);
+  background: rgba(0, 210, 255, 0.15);
+  color: #00d2ff;
 }
 
 .custom-rate {
