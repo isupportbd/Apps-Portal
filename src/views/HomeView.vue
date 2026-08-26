@@ -156,7 +156,7 @@ const apps = [
     url: '#',
     status: 'Coming Soon',
     color: '#f43f5e'
-
+  }
 ];
 
 </script>
