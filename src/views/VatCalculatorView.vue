@@ -109,14 +109,6 @@ const reset = () => {
     </nav>
 
     <div class="vat-calc-page">
-      <div class="vat-calc-header">
-        <div class="container">
-          <div class="vat-calc-header-content animate-fade-in">
-            <h1><span class="inline-icon">🧮</span> VAT <span class="text-gradient">Calculator</span></h1>
-            <p>Accurate and quick VAT calculation based on standard Bangladesh VAT rates.</p>
-          </div>
-        </div>
-      </div>
 
       <div class="container">
         <div class="vat-calc-wrapper animate-fade-in delay-100">
