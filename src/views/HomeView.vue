@@ -53,7 +53,7 @@ const apps = [
     name: 'BIN Checker',
     description: 'Verify and check BIN information efficiently and securely.',
     icon: '🔍',
-    url: 'http://localhost:5175',
+    url: 'https://bin.isupportbd.com',
     status: 'Live',
     color: '#00d2ff'
   },
