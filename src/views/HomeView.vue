@@ -62,8 +62,8 @@ const apps = [
     name: 'IDP',
     description: 'Intelligent Document Processing and management system.',
     icon: '📄',
-    url: '#',
-    status: 'Coming Soon',
+    url: 'https://idp.isupportbd.com',
+    status: 'Live',
     color: '#a855f7'
   },
   {
