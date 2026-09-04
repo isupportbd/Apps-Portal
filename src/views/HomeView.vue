@@ -838,9 +838,6 @@ section {
 }
 
 /* FAQ Section */
-.faq-section {
-}
-
 .faq-list {
   max-width: 800px;
   width: 100%;
