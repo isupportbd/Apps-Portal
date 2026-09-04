@@ -641,9 +641,7 @@ section {
 
 /* Features Section */
 .features-section {
-  background: rgba(255, 255, 255, 0.02);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
 }
 
 .features-grid {
@@ -716,13 +714,7 @@ section {
 
 /* Apps Grid and Main Card */
 .portal-main-card {
-  background: rgba(13, 17, 23, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: 4rem 2rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  padding: 4rem 0;
   width: 100%;
 }
 
@@ -847,9 +839,6 @@ section {
 
 /* FAQ Section */
 .faq-section {
-  background: rgba(255, 255, 255, 0.02);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .faq-list {

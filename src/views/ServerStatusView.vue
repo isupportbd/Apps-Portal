@@ -200,10 +200,14 @@ onUnmounted(() => {
 
 /* Navbar */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 1rem 0;
   background: rgba(13, 17, 23, 0.8);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 1000;
 }
