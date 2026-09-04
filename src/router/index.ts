@@ -22,6 +22,12 @@ const router = createRouter({
       name: 'vat-calculator',
       component: () => import('../views/VatCalculatorView.vue'),
       meta: { title: 'VAT Calculator | iSupportBD' }
+    },
+    {
+      path: '/server-status',
+      name: 'server-status',
+      component: () => import('../views/ServerStatusView.vue'),
+      meta: { title: 'Server Status | iSupportBD' }
     }
   ]
 })

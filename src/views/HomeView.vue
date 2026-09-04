@@ -382,7 +382,7 @@ const apps = [
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 iSupport BD. All Rights Reserved.</p>
+        <p>&copy; 2026 iSupport BD. All Rights Reserved. | <router-link to="/server-status" class="footer-link">Server Status</router-link></p>
       </div>
     </footer>
   </div>
@@ -1023,6 +1023,17 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   color: #64748b;
   font-size: 0.9rem;
+}
+
+.footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 @keyframes fadeInUp {
