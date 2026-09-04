@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -7,24 +7,65 @@ const goBack = () => {
   router.push('/');
 };
 
-// Mock Server Stats
+// System Stats State
 const isOnline = ref(true);
+const isLoading = ref(true);
 
 const cpuStats = ref({
-  usage: 45,
-  cores: 8
+  usage: 0,
+  cores: 0
 });
 
 const ramStats = ref({
-  used: 3.2,
-  total: 8.0,
-  percentage: 40
+  used: 0,
+  total: 0,
+  percentage: 0
 });
 
 const hddStats = ref({
-  used: 45.5,
-  total: 100.0,
-  percentage: 45.5
+  used: 0,
+  total: 0,
+  percentage: 0
+});
+
+// Fetch Real Data
+let intervalId: ReturnType<typeof setInterval>;
+
+const fetchStatus = async () => {
+  try {
+    const res = await fetch('https://api-idp.isupportbd.com/api/system-status');
+    if (res.ok) {
+      const data = await res.json();
+      cpuStats.value = data.cpu;
+      ramStats.value = {
+        used: parseFloat((data.ram.used / (1024 ** 3)).toFixed(1)),
+        total: parseFloat((data.ram.total / (1024 ** 3)).toFixed(1)),
+        percentage: data.ram.percentage
+      };
+      hddStats.value = {
+        used: parseFloat((data.disk.used / (1024 ** 3)).toFixed(1)),
+        total: parseFloat((data.disk.total / (1024 ** 3)).toFixed(1)),
+        percentage: data.disk.percentage
+      };
+      isOnline.value = true;
+    } else {
+      isOnline.value = false;
+    }
+  } catch (error) {
+    isOnline.value = false;
+    console.error('Error fetching server status:', error);
+  } finally {
+    isLoading.value = false;
+  }
+};
+
+onMounted(() => {
+  fetchStatus();
+  intervalId = setInterval(fetchStatus, 10000); // refresh every 10 seconds
+});
+
+onUnmounted(() => {
+  if (intervalId) clearInterval(intervalId);
 });
 
 </script>
