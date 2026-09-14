@@ -50,8 +50,8 @@ const ctaData = {
 const apps = [
   {
     id: 1,
-    name: 'এনালাইজার',
-    description: 'বিন স্ট্যাটাস, নন-ফাইলার এবং রিটার্ন ডেটা এনালাইসিস করার পূর্ণাঙ্গ সমাধান।',
+    name: 'Analyser',
+    description: 'A comprehensive solution for analyzing BIN status, non-filer tracking, and return data.',
     icon: '📊',
     url: 'https://analyser.isupportbd.com',
     status: 'Live',
