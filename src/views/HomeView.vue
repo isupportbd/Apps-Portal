@@ -50,10 +50,10 @@ const ctaData = {
 const apps = [
   {
     id: 1,
-    name: 'BIN Checker',
-    description: 'Verify and check BIN information efficiently and securely.',
-    icon: '🔍',
-    url: 'https://bin.isupportbd.com',
+    name: 'এনালাইজার',
+    description: 'বিন স্ট্যাটাস, নন-ফাইলার এবং রিটার্ন ডেটা এনালাইসিস করার পূর্ণাঙ্গ সমাধান।',
+    icon: '📊',
+    url: 'https://analyser.isupportbd.com',
     status: 'Live',
     color: '#00d2ff'
   },
